@@ -1,0 +1,43 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #4f83df;
+  background-color: #4c8bf7;
+  user-select: none;
+  position: relative;
+  color: #ffffff;
+  cursor: pointer;
+
+  &--loading {
+    cursor: auto;
+  }
+
+  &__spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1.2s linear infinite;
+  }
+
+  &--disable {
+    color: #2e3640;
+    border: 1px solid #e3e5e6;
+    background-color: #fcfcfc;
+    cursor: auto;
+  }
+
+  @keyframes button-loading-spinner {
+    0% { transform:  rotate(0deg); }
+    100% { transform:  rotate(360deg); }
+  }
+}
